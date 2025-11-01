@@ -21,6 +21,7 @@ body {
   -moz-osxfont-smooth: none;
   -webkit-user-select: none;
   -moz-osx-user-select: none;
+  user-select: none;
   overscroll-behavior: contain;
   display: flex;
   flex-direction: column;
@@ -95,6 +96,9 @@ body {
   position: absolute;
   padding: 3px;
   overflow: hidden;
+  /* don't allow windows to grow larger than viewport */
+  max-width: 99.7%;
+  max-height: calc(99.5% - 3.5rem);
 }
 
 .window:not(.error, #win-contact) {
