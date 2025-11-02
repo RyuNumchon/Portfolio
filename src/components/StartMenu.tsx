@@ -1,14 +1,16 @@
 import React from "react";
 import { useWindowManager } from "../hooks/windowManager";
-import Skills from "./windows/Skills";
-import Work from "./windows/Work";
-import Education from "./windows/Education";
-import About from "./windows/About";
-import Contact from "./windows/Contact";
-import Downloads from "./windows/Downloads";
+import { useTheme } from "../hooks/theme";
+import Skills from "./applications/Skills";
+import Work from "./applications/Work";
+import Education from "./applications/Education";
+import About from "./applications/About";
+import Contact from "./applications/Contact";
+import Downloads from "./applications/Downloads";
 
 const StartMenu: React.FC = () => {
   const { openWindow, startOpen, duplicateError } = useWindowManager();
+  const { theme, toggleTheme } = useTheme();
 
   if (!startOpen) return <div id="start-box" style={{ display: "none" }} />;
 
@@ -18,6 +20,18 @@ const StartMenu: React.FC = () => {
         <span id="start-header-name">Hello World!</span>
       </div>
       <div id="start-tray">
+        <div style={{ padding: "6px 8px" }}>
+          <button
+            className="start-item"
+            onClick={() => toggleTheme()}
+            title={`Switch theme (current: ${theme})`}
+            style={{ display: "inline-block", marginBottom: 8 }}
+          >
+            <div className="start-item-holder">
+              Theme: {theme === "mac" ? "Mac" : "Win98"}
+            </div>
+          </button>
+        </div>
         <button
           className="start-item"
           onClick={() =>

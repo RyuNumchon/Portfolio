@@ -1,0 +1,249 @@
+/* Mac classic theme overrides */
+
+/* background: vertical stripes */
+.theme-mac .webpage {
+  background-color: #f6f6f6;
+  /* subtle checkerboard similar to classic paper texture */
+  background-image: linear-gradient(
+      45deg,
+      #ffffff 25%,
+      transparent 25%,
+      transparent 75%,
+      #ffffff 75%
+    ),
+    linear-gradient(
+      45deg,
+      #ffffff 25%,
+      transparent 25%,
+      transparent 75%,
+      #ffffff 75%
+    );
+  background-position: 0 0, 8px 8px;
+  background-size: 16px 16px;
+}
+
+.theme-mac .window,
+.theme-mac #start-box {
+  background: #cfcfcf;
+  box-shadow: inset -2px -2px #fff, inset 2px 2px #9a9a9a;
+}
+
+.theme-mac .title-bar {
+  background-image: repeating-linear-gradient(
+    90deg,
+    #e6e6e6 0 2px,
+    #d9d9d9 2px 4px
+  );
+  border-bottom: 1px solid #888;
+}
+
+.theme-mac .title-bar-text {
+  color: #000;
+}
+
+.theme-mac .window-body {
+  background: #e9e9e9;
+}
+
+/* Mac like icons: slightly larger, monochrome */
+.theme-mac .content img,
+.theme-mac .content .icon-pic {
+  filter: grayscale(100%) contrast(95%);
+}
+
+/* Checker background for info boxes */
+.theme-mac .info-content {
+  background-image: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.06) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(255, 255, 255, 0.06) 75%
+    ),
+    linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.06) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(255, 255, 255, 0.06) 75%
+    );
+  background-size: 16px 16px;
+  background-position: 0 0, 8px 8px;
+}
+
+/* Mac-like footer */
+.theme-mac #footer {
+  background: #d1d1d1;
+  border-top: 1px solid #a0a0a0;
+}
+
+/* Start box rotated header styling for mac */
+.theme-mac #start-header {
+  background: #bfbfbf;
+}
+
+/* Slightly different button shadows */
+.theme-mac button {
+  box-shadow: inset -1px -1px #fff, inset 1px 1px #b3b3b3;
+}
+
+/* Additional Mac-like refinements to better match the reference */
+.theme-mac .webpage {
+  background-color: #fff;
+  /* subtle vertical paper stripes */
+  background-image: linear-gradient(
+    90deg,
+    rgba(200, 200, 200, 0.06) 0.5rem,
+    transparent 0.5rem
+  );
+  background-size: 1rem 100%;
+}
+
+.theme-mac .window,
+.theme-mac #start-box {
+  background: #e6e6e6;
+  border: 2px solid #9a9a9a;
+  box-shadow: inset -2px -2px #fff, inset 2px 2px #9a9a9a;
+}
+
+.theme-mac .title-bar {
+  /* horizontal parallel lines on title-bar */
+  background-image: repeating-linear-gradient(
+    0deg,
+    #e6e6e6 0 3px,
+    #d9d9d9 3px 6px
+  );
+  border-bottom: 1px solid #7f7f7f;
+  height: 30px;
+  box-sizing: border-box;
+}
+
+.theme-mac .title-bar-text {
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 6px;
+  font-size: 0.9rem;
+}
+
+/* Desktop icon boxes and separators */
+.theme-mac .desktop .content {
+  width: 88px;
+  padding: 6px 8px;
+  margin: 12px 18px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+}
+
+.theme-mac .desktop .content .icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fbfbfb;
+  border: 1px solid #e0e0e0; /* subtle outer frame */
+  box-shadow: inset -1px -1px #ffffff90, inset 1px 1px #d9d9d9;
+}
+
+.theme-mac .desktop .content .icon img {
+  border: none; /* ensure no image-origin border */
+  image-rendering: pixelated;
+  width: 32px;
+  height: 32px;
+}
+
+.theme-mac .desktop .content .icon-name {
+  margin-top: 6px;
+  font-size: 12px;
+  text-align: center;
+  color: #111;
+}
+
+.theme-mac .desktop .content::after {
+  display: none;
+}
+
+/* Inner white info-content with black border like screenshot */
+.theme-mac .info-content {
+  background: #fff;
+  border: 2px solid #000;
+  box-shadow: none;
+  width: calc(100% - 2rem);
+  margin: 0 0 0 1rem;
+}
+
+.theme-mac .info-content > div {
+  background: #fff;
+}
+
+/* Classic chunky scrollbars */
+.theme-mac ::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+.theme-mac ::-webkit-scrollbar-track {
+  background: #e9e9e9;
+  border-left: 1px solid #d0d0d0;
+}
+.theme-mac ::-webkit-scrollbar-thumb {
+  background: #bfbfbf;
+  border: 2px solid #e9e9e9;
+  border-radius: 2px;
+}
+
+/* Footer/Start button and clock */
+.theme-mac #footer {
+  background: #e6e6e6;
+  border-top: 1px solid #9a9a9a;
+}
+.theme-mac #start-button {
+  background: #dcdcdc;
+  border: 1px solid #9a9a9a;
+  box-shadow: inset -1px -1px #fff, inset 1px 1px #bfbfbf;
+}
+.theme-mac .status-bar-field {
+  background: #fff;
+  border: 1px solid #000;
+  padding: 0.1rem 0.4rem;
+  font-weight: 700;
+}
+
+/* Ensure checker background applies to full page (html/body) when theme is active */
+.theme-mac html,
+.theme-mac body {
+  background-color: #f6f6f6;
+  background-image: linear-gradient(
+      45deg,
+      #ffffff 25%,
+      transparent 25%,
+      transparent 75%,
+      #ffffff 75%
+    ),
+    linear-gradient(
+      45deg,
+      #ffffff 25%,
+      transparent 25%,
+      transparent 75%,
+      #ffffff 75%
+    );
+  background-position: 0 0, 8px 8px;
+  background-size: 16px 16px;
+}
+
+/* Remove extra icon framing so icons look crisp and not double-framed */
+.theme-mac .desktop .content {
+  background: transparent;
+  box-shadow: none;
+}
+.theme-mac .desktop .content .icon {
+  border: none; /* remove outer border which produced a framed look */
+  box-shadow: none;
+  background: transparent;
+}
+.theme-mac .content .icon-name {
+  color: #111;
+}

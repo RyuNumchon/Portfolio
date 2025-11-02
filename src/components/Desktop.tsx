@@ -1,9 +1,9 @@
 import React from "react";
 import { useWindowManager } from "../hooks/windowManager";
-import Skills from "./windows/Skills";
-import Work from "./windows/Work";
-import Education from "./windows/Education";
-import About from "./windows/About";
+import Skills from "./applications/Skills";
+import Work from "./applications/Work";
+import Education from "./applications/Education";
+import About from "./applications/About";
 
 const Desktop: React.FC = () => {
   const { openWindow } = useWindowManager();
