@@ -68,15 +68,13 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 0.5rem;
   flex-wrap: wrap;
   width: auto;
   height: calc(100% - 3.75rem);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: flex-start;
   box-sizing: border-box;
 }
 
@@ -84,12 +82,8 @@ body {
   background: transparent;
   border: none;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   max-width: 7rem;
   width: auto;
-  justify-content: center;
   margin: 1rem 0 2rem 1rem;
   padding: 0.25rem 0;
 }
@@ -160,15 +154,6 @@ button::-moz-focus-inner {
   overflow: hidden;
   display: none;
   padding: 3px 2px 0 0;
-}
-
-/* Fix: ensure footer is pinned to bottom of viewport */
-#footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 99999;
 }
 
 /* Misc overrides to guard against nested/invalid CSS elsewhere */
@@ -430,11 +415,10 @@ ul.tree-view details > summary::marker {
 }
 
 #footer {
-  height: 2.5rem;
+  height: 3.5rem;
   /* Footer height */
   padding: 0.5rem;
   z-index: 99999;
-  flex: 0 0 auto;
 }
 
 .start-bar {
