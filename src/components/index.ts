@@ -1,5 +1,7 @@
-export { default as Desktop } from './Desktop';
-export { default as WindowSection } from './WindowSection';
-export { default as MessageStack } from './MessageStack';
-export { default as StartMenu } from './StartMenu';
-export { default as Footer } from './Footer';
+export * from "./common";
+export * from "./window";
+export * from "./desktop";
+export * from "./taskbar";
+export * from "./startmenu";
+export * from "./error";
+export * from "./applications";
