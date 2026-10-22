@@ -1,38 +1,72 @@
 import React from "react";
+import { ICONS } from "../../config/icons";
 
 const About: React.FC = () => {
   return (
-    <div className="window-body">
-      <div className="about-top">
-        <img
-          src="https://firebasestorage.googleapis.com/v0/b/ryu-profile.appspot.com/o/icon%2Fprofile.png?alt=media"
-          alt="profile"
-          className="avatar"
-        />
-        <div className="about-meta">
-          <h2>Ryu Numchon</h2>
-          <p>Software Developer • Full-Stack • AI Enthusiast</p>
-          <p>Based in Bangkok, Thailand</p>
-        </div>
-      </div>
-
-      <div className="info-content padding">
-        <h3>About</h3>
-        <p>
-          I'm a software developer with experience building web applications
-          using modern JavaScript frameworks. I enjoy working on UI/UX
-          improvements, frontend engineering, and learning about machine
-          learning and AI.
-        </p>
-
-        <h3>Interests</h3>
-        <ul>
-          <li>Web Development (React, TypeScript)</li>
-          <li>Machine Learning / Deep Learning</li>
-          <li>Open-source & side projects</li>
-        </ul>
-      </div>
-    </div>
+    <ul className="tree-view">
+      <li>About Me</li>
+      <ul>
+        <li>
+          <details open>
+            <summary>
+              <img src={ICONS.userCalendar} alt="calendar" />
+              Personal Info
+            </summary>
+            <ul>
+              <li>
+                <strong>Name:</strong> Kongpanat Tangphonphisuth
+              </li>
+              <li>
+                <strong>Nickname:</strong> Ryu
+              </li>
+              <li>
+                <strong>Birth Year:</strong> 2000
+              </li>
+              <li>
+                <strong>Nationality:</strong> Thai
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>
+              <img src={ICONS.appWizard} alt="hobbies" />
+              Hobbies &amp; Interests
+            </summary>
+            <ul>
+              <li>
+                <details>
+                  <summary>Art</summary>
+                  <ul>
+                    <li>Digital Art</li>
+                    <li>Drawing</li>
+                    <li>Painting</li>
+                    <li>Sketching</li>
+                    <li>Painting Admiring</li>
+                  </ul>
+                </details>
+              </li>
+              <li>Piano</li>
+              <li>Coding</li>
+              <li>
+                <details>
+                  <summary>Sports</summary>
+                  <ul>
+                    <li>Badminton</li>
+                    <li>Table Tennig</li>
+                    <li>Running</li>
+                  </ul>
+                </details>
+              </li>
+              <li>Reading</li>
+              <li>Videogame</li>
+              <li>Internet Surfing</li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </ul>
   );
 };
 

@@ -1,0 +1,10 @@
+export { default as Skills } from "./Skills";
+export { default as Work } from "./Work";
+export { default as Education } from "./Education";
+export { default as About } from "./About";
+export { default as Contact } from "./Contact";
+export { default as Downloads } from "./Downloads";
+export { default as Siit } from "./Siit";
+export { default as Sjps } from "./Sjps";
+export { default as Achievements } from "./Achievements";
+export { default as TestScores } from "./TestScores";

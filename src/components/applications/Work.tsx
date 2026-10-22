@@ -1,73 +1,104 @@
-import React from "react";
+import React, { useState } from "react";
+import { ICONS } from "../../config/icons";
 
 const Work: React.FC = () => {
+  const [selectedTopic, setSelectedTopic] = useState<string>("topic-4");
+
   return (
-    <div className="window-body">
+    <>
       <div className="options padding">
         <div className="item">Location</div>
         <input
           type="text"
           defaultValue="Work Experiences"
           className="location"
+          readOnly
         />
       </div>
 
       <div className="tab-box-content">
-        <input name="topics-radio" id="topic-4" type="radio" defaultChecked />
-        <input name="topics-radio" id="topic-3" type="radio" />
-        <input name="topics-radio" id="topic-2" type="radio" />
-        <input name="topics-radio" id="topic-1" type="radio" />
-        <input name="topics-radio" id="topic-0" type="radio" />
+        <input
+          name="topics-radio"
+          id="topic-4"
+          type="radio"
+          checked={selectedTopic === "topic-4"}
+          onChange={() => setSelectedTopic("topic-4")}
+        />
+        <input
+          name="topics-radio"
+          id="topic-3"
+          type="radio"
+          checked={selectedTopic === "topic-3"}
+          onChange={() => setSelectedTopic("topic-3")}
+        />
+        <input
+          name="topics-radio"
+          id="topic-2"
+          type="radio"
+          checked={selectedTopic === "topic-2"}
+          onChange={() => setSelectedTopic("topic-2")}
+        />
+        <input
+          name="topics-radio"
+          id="topic-1"
+          type="radio"
+          checked={selectedTopic === "topic-1"}
+          onChange={() => setSelectedTopic("topic-1")}
+        />
+        <input
+          name="topics-radio"
+          id="topic-0"
+          type="radio"
+          checked={selectedTopic === "topic-0"}
+          onChange={() => setSelectedTopic("topic-0")}
+        />
+
         <div className="tab-box">
           <div className="tab-header">Duration</div>
           <ul className="box">
             <li>
-              <label htmlFor="topic-4">
-                <img
-                  src="https://firebasestorage.googleapis.com/v0/b/ryu-profile.appspot.com/o/icon%2Fwrite_file-0.png?alt=media&token=fbeb71a9-4c8f-4fc5-acd0-a0445aeb2c3b"
-                  alt="A+"
-                />
-                Jun. 2023 – Jul. 2023
+              <label
+                htmlFor="topic-4"
+                onClick={() => setSelectedTopic("topic-4")}
+              >
+                <img src={ICONS.writeFile} alt="A+" /> Jun. 2023 – Jul. 2023
               </label>
             </li>
             <li>
-              <label htmlFor="topic-3">
-                <img
-                  src="https://firebasestorage.googleapis.com/v0/b/ryu-profile.appspot.com/o/icon%2Fwrite_file-0.png?alt=media&token=fbeb71a9-4c8f-4fc5-acd0-a0445aeb2c3b"
-                  alt="A+"
-                />
-                Jun. 2022 – Aug. 2022
+              <label
+                htmlFor="topic-3"
+                onClick={() => setSelectedTopic("topic-3")}
+              >
+                <img src={ICONS.writeFile} alt="A+" /> Jun. 2022 – Aug. 2022
               </label>
             </li>
             <li>
-              <label htmlFor="topic-2">
-                <img
-                  src="https://firebasestorage.googleapis.com/v0/b/ryu-profile.appspot.com/o/icon%2Fwrite_file-0.png?alt=media&token=fbeb71a9-4c8f-4fc5-acd0-a0445aeb2c3b"
-                  alt="A+"
-                />
-                Oct. 2020
+              <label
+                htmlFor="topic-2"
+                onClick={() => setSelectedTopic("topic-2")}
+              >
+                <img src={ICONS.writeFile} alt="A+" /> Oct. 2020
               </label>
             </li>
             <li>
-              <label htmlFor="topic-1">
-                <img
-                  src="https://firebasestorage.googleapis.com/v0/b/ryu-profile.appspot.com/o/icon%2Fwrite_file-0.png?alt=media&token=fbeb71a9-4c8f-4fc5-acd0-a0445aeb2c3b"
-                  alt="A+"
-                />
-                Mar. 2020 - Present
+              <label
+                htmlFor="topic-1"
+                onClick={() => setSelectedTopic("topic-1")}
+              >
+                <img src={ICONS.writeFile} alt="A+" /> Mar. 2020 - Present
               </label>
             </li>
             <li>
-              <label htmlFor="topic-0">
-                <img
-                  src="https://firebasestorage.googleapis.com/v0/b/ryu-profile.appspot.com/o/icon%2Fwrite_file-0.png?alt=media&token=fbeb71a9-4c8f-4fc5-acd0-a0445aeb2c3b"
-                  alt="A+"
-                />
-                Projects
+              <label
+                htmlFor="topic-0"
+                onClick={() => setSelectedTopic("topic-0")}
+              >
+                <img src={ICONS.writeFile} alt="A+" /> Projects
               </label>
             </li>
           </ul>
         </div>
+
         <div className="info-content">
           <div className="topic-4-content">
             <h2>Mula-X Holding (Thailand) Co., LTD.</h2>
@@ -89,6 +120,7 @@ const Work: React.FC = () => {
               </li>
             </ul>
           </div>
+
           <div className="topic-3-content">
             <h2>Wan Thai Foods Industry Co., LTD.</h2>
             <p>Computer Engineer Intern - DX Dept.</p>
@@ -109,14 +141,13 @@ const Work: React.FC = () => {
               <li>IT Helpdesk</li>
             </ul>
           </div>
+
           <div className="topic-2-content">
             <h2>Eventpop Company</h2>
             <p>Freelance staff - Meeting Moderator</p>
             <u>Virtual Meeting (2020):</u>
             <ul>
-              <li>
-                Moderator of the virtual event via Zoom online meeting platform
-              </li>
+              <li>Moderator of the virtual event via Zoom online meeting platform</li>
             </ul>
           </div>
 
@@ -134,10 +165,26 @@ const Work: React.FC = () => {
             <ul>
               <li>
                 Artery segmentation for anesthesia ultrasound CT images using
-                deep learning techniques (&lt;In process&gt;)
+                deep learning techniques (
+                <a href="" target="_blank" rel="noreferrer">
+                  In process
+                </a>
+                )
               </li>
-              <li>X Game - Game Development Course (&lt;In process&gt;)</li>
-              <li>- Deep Learning Course (&lt;In process&gt;)</li>
+              <li>
+                X Game - Game Development Course (
+                <a href="" target="_blank" rel="noreferrer">
+                  In process
+                </a>
+                )
+              </li>
+              <li>
+                Deep Learning Course (
+                <a href="" target="_blank" rel="noreferrer">
+                  In process
+                </a>
+                )
+              </li>
               <li>
                 Binary Calculation Game With Arduino UNO - Micro Controller
                 Course (
@@ -192,7 +239,7 @@ const Work: React.FC = () => {
                 )
               </li>
               <li>
-                &lt;il&gt;Shipping Management Website - Database Course (
+                Shipping Management Website - Database Course (
                 <a
                   href="https://github.com/RyuNumchon/Shipping-Management-Website.git"
                   target="_blank"
@@ -257,7 +304,7 @@ const Work: React.FC = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  sketche book
+                  sketch book
                 </a>
                 )
               </li>
@@ -265,7 +312,7 @@ const Work: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

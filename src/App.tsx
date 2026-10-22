@@ -1,31 +1,27 @@
 import "./App.css";
 import "./styles/win98.css";
-import "./styles/mac.css";
 import "./styles/general.css";
 
-import Desktop from "./components/Desktop";
-import WindowSection from "./components/WindowSection";
-import MessageStack from "./components/MessageStack";
-import StartMenu from "./components/StartMenu";
-import Footer from "./components/Footer";
-import { WindowProvider } from "./hooks/windowManager";
-import { ThemeProvider } from "./hooks/theme";
+import { WindowProvider } from "./context/WindowContext";
+import { Desktop } from "./components/desktop";
+import { WindowSection } from "./components/window";
+import { MessageStack } from "./components/error";
+import { StartMenu } from "./components/startmenu";
+import { Taskbar } from "./components/taskbar";
 
 function App() {
   return (
-    <ThemeProvider>
-      <WindowProvider>
-        <div className="wrappage">
-          <section className="webpage">
-            <Desktop />
-            <WindowSection />
-            <MessageStack />
-          </section>
-          <StartMenu />
-          <Footer />
-        </div>
-      </WindowProvider>
-    </ThemeProvider>
+    <WindowProvider>
+      <div className="wrappage">
+        <section className="webpage">
+          <Desktop />
+          <WindowSection />
+          <MessageStack />
+        </section>
+        <StartMenu />
+        <Taskbar />
+      </div>
+    </WindowProvider>
   );
 }
 

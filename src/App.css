@@ -1,26 +1,6 @@
-/* Minimal App CSS to avoid missing import. Global styles are in styles/* */
-:root {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 html,
 body,
 #root {
   height: 100%;
-}
-
-body {
   margin: 0;
-}
-
-/* small helper so windows are visible by default */
-#window-section .window {
-  background: silver;
-  border: 2px inset #ccc;
 }
