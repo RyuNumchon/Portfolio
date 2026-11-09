@@ -9,7 +9,7 @@ const Education: React.FC = () => {
   return (
     <>
       <FolderItem
-        label="Aug. 2020 - Present"
+        label="Aug. 2020 - Mar. 2024"
         icon={ICONS.siit8b}
         onClick={() => openWindow("win-siit")}
       />

@@ -86,7 +86,7 @@ const Work: React.FC = () => {
                 htmlFor="topic-1"
                 onClick={() => setSelectedTopic("topic-1")}
               >
-                <Icon src={ICONS.writeFile} alt="A+" /> Mar. 2020 - Present
+                <Icon src={ICONS.writeFile} alt="A+" /> Mar. 2020 - Mar. 2025
               </label>
             </li>
             <li>
