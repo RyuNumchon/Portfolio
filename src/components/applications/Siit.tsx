@@ -1,10 +1,11 @@
 import React from "react";
 import { ICONS } from "../../config/icons";
+import Icon from "../common/Icon";
 
 const Siit: React.FC = () => {
   return (
     <div style={{ padding: "10% 20% 0 20%" }}>
-      <img
+      <Icon
         className="icon-pic infolder"
         src={ICONS.siitLogo}
         alt="siit"

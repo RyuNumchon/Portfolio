@@ -212,6 +212,7 @@ button::-moz-focus-inner {
 
 .start-item-holder {
   display: flex;
+  flex: 0 0 auto;
   align-items: center;
   gap: 4px;
   margin-left: 0.5rem;
@@ -223,6 +224,10 @@ button::-moz-focus-inner {
   width: 25px;
   margin: 0;
   object-fit: contain;
+}
+
+.start-item-holder span {
+  white-space: nowrap;
 }
 
 .title-bar {
@@ -499,6 +504,10 @@ ul.tree-view details > summary::marker {
 .footer-section {
   box-sizing: border-box;
   flex-shrink: 1;
+}
+
+.theme-control {
+  position: relative;
 }
 
 #start-button {

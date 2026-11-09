@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ICONS } from "../../config/icons";
+import Icon from "../common/Icon";
 
 const Work: React.FC = () => {
   const [selectedTopic, setSelectedTopic] = useState<string>("topic-4");
@@ -61,7 +62,7 @@ const Work: React.FC = () => {
                 htmlFor="topic-4"
                 onClick={() => setSelectedTopic("topic-4")}
               >
-                <img src={ICONS.writeFile} alt="A+" /> Jun. 2023 – Jul. 2023
+                <Icon src={ICONS.writeFile} alt="A+" /> Jun. 2023 – Jul. 2023
               </label>
             </li>
             <li>
@@ -69,7 +70,7 @@ const Work: React.FC = () => {
                 htmlFor="topic-3"
                 onClick={() => setSelectedTopic("topic-3")}
               >
-                <img src={ICONS.writeFile} alt="A+" /> Jun. 2022 – Aug. 2022
+                <Icon src={ICONS.writeFile} alt="A+" /> Jun. 2022 – Aug. 2022
               </label>
             </li>
             <li>
@@ -77,7 +78,7 @@ const Work: React.FC = () => {
                 htmlFor="topic-2"
                 onClick={() => setSelectedTopic("topic-2")}
               >
-                <img src={ICONS.writeFile} alt="A+" /> Oct. 2020
+                <Icon src={ICONS.writeFile} alt="A+" /> Oct. 2020
               </label>
             </li>
             <li>
@@ -85,7 +86,7 @@ const Work: React.FC = () => {
                 htmlFor="topic-1"
                 onClick={() => setSelectedTopic("topic-1")}
               >
-                <img src={ICONS.writeFile} alt="A+" /> Mar. 2020 - Present
+                <Icon src={ICONS.writeFile} alt="A+" /> Mar. 2020 - Present
               </label>
             </li>
             <li>
@@ -93,7 +94,7 @@ const Work: React.FC = () => {
                 htmlFor="topic-0"
                 onClick={() => setSelectedTopic("topic-0")}
               >
-                <img src={ICONS.writeFile} alt="A+" /> Projects
+                <Icon src={ICONS.writeFile} alt="A+" /> Projects
               </label>
             </li>
           </ul>
