@@ -34,6 +34,7 @@ export const WindowProvider: React.FC<{ children: ReactNode }> = ({
 
   // Global z-index counter matching original var z = 1
   const zCounter = useRef<number>(1);
+  const taskbarOrderCounter = useRef<number>(0);
 
   // Error duplicate state matching original: var i = 0, x = 15, y = 12
   const errorIndex = useRef<number>(0);
@@ -45,6 +46,11 @@ export const WindowProvider: React.FC<{ children: ReactNode }> = ({
       zCounter.current = 1;
     }
     return zCounter.current;
+  };
+
+  const getNextTaskbarOrder = () => {
+    taskbarOrderCounter.current += 1;
+    return taskbarOrderCounter.current;
   };
 
   const openWindow = (id: string) => {
@@ -66,6 +72,7 @@ export const WindowProvider: React.FC<{ children: ReactNode }> = ({
         {
           id,
           zIndex: newZ,
+          taskbarOrder: getNextTaskbarOrder(),
           isMaximized: false,
         },
       ];
@@ -78,7 +85,7 @@ export const WindowProvider: React.FC<{ children: ReactNode }> = ({
         // Already open, bring to front
         const newZ = getNextZ();
         return prev.map((e) =>
-          e.id === "error0" ? { ...e, zIndex: newZ } : e
+          e.id === "error0" ? { ...e, zIndex: newZ } : e,
         );
       }
       return [
@@ -89,6 +96,7 @@ export const WindowProvider: React.FC<{ children: ReactNode }> = ({
           x: 42,
           y: 43,
           zIndex: getNextZ(),
+          taskbarOrder: getNextTaskbarOrder(),
         },
       ];
     });
@@ -110,6 +118,7 @@ export const WindowProvider: React.FC<{ children: ReactNode }> = ({
           x,
           y,
           zIndex: newZ,
+          taskbarOrder: getNextTaskbarOrder(),
         },
       ]);
 
@@ -132,11 +141,11 @@ export const WindowProvider: React.FC<{ children: ReactNode }> = ({
     const newZ = getNextZ();
     if (id.startsWith("error")) {
       setErrorWindows((prev) =>
-        prev.map((e) => (e.id === id ? { ...e, zIndex: newZ } : e))
+        prev.map((e) => (e.id === id ? { ...e, zIndex: newZ } : e)),
       );
     } else {
       setWindows((prev) =>
-        prev.map((w) => (w.id === id ? { ...w, zIndex: newZ } : w))
+        prev.map((w) => (w.id === id ? { ...w, zIndex: newZ } : w)),
       );
     }
   };
@@ -171,13 +180,13 @@ export const WindowProvider: React.FC<{ children: ReactNode }> = ({
             zIndex: newZ,
           };
         }
-      })
+      }),
     );
   };
 
   const updateWindowPosition = (id: string, x: number, y: number) => {
     setWindows((prev) =>
-      prev.map((w) => (w.id === id ? { ...w, position: { x, y } } : w))
+      prev.map((w) => (w.id === id ? { ...w, position: { x, y } } : w)),
     );
   };
 
