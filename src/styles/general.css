@@ -15,6 +15,10 @@ body {
   overflow: hidden;
 }
 
+img {
+  image-rendering: pixelated;
+}
+
 body {
   image-rendering: pixelated;
   -webkit-font-smoothing: none;
@@ -219,7 +223,6 @@ button::-moz-focus-inner {
   width: 25px;
   margin: 0;
   object-fit: contain;
-  image-rendering: pixelated;
 }
 
 .title-bar {
@@ -338,6 +341,14 @@ button::-moz-focus-inner {
   max-height: 2rem;
 }
 
+::-webkit-scrollbar,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-corner {
+  border-radius: 0;
+}
+
 ::-webkit-scrollbar-corner {
   background-color: #dfdfdf;
 }
@@ -347,7 +358,7 @@ button::-moz-focus-inner {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #dfdfdf;
+  background-color: grey;
 }
 
 ::-webkit-scrollbar-button:horizontal:end:increment,

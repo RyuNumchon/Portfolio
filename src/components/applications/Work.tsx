@@ -147,7 +147,9 @@ const Work: React.FC = () => {
             <p>Freelance staff - Meeting Moderator</p>
             <u>Virtual Meeting (2020):</u>
             <ul>
-              <li>Moderator of the virtual event via Zoom online meeting platform</li>
+              <li>
+                Moderator of the virtual event via Zoom online meeting platform
+              </li>
             </ul>
           </div>
 
@@ -286,17 +288,6 @@ const Work: React.FC = () => {
             <u>Personal Projects</u>
             <ul>
               <li>This Website</li>
-              <li>
-                Discord Chatbot - Using API (
-                <a
-                  href="https://discord.com/api/oauth2/authorize?client_id=845184401498439711&permissions=446677010496&scope=bot"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  link
-                </a>
-                )
-              </li>
               <li>
                 Doodles &amp; Freestyle Art (
                 <a

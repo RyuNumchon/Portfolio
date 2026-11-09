@@ -6,6 +6,9 @@ import ErrorDialog from "../error/ErrorDialog";
 
 export const WindowSection: React.FC = () => {
   const { windows, errorWindows } = useWindowManager();
+  const firstError = errorWindows.find(
+    (errorState) => errorState.id === "error0",
+  );
 
   return (
     <div id="window-section">
@@ -14,9 +17,7 @@ export const WindowSection: React.FC = () => {
         if (!app) return null;
         return <Window key={winState.id} app={app} windowState={winState} />;
       })}
-      {errorWindows.map((errorState) => (
-        <ErrorDialog key={errorState.id} errorState={errorState} />
-      ))}
+      {firstError && <ErrorDialog errorState={firstError} />}
     </div>
   );
 };

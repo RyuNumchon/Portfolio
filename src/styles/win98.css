@@ -1,5 +1,23 @@
+@font-face {
+  font-family: "Pixelated MS Sans Serif";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("/assets/fonts/ms_sans_serif.woff2") format("woff2"),
+    url("/assets/fonts/ms_sans_serif.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pixelated MS Sans Serif";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url("/assets/fonts/ms_sans_serif_bold.woff2") format("woff2"),
+    url("/assets/fonts/ms_sans_serif_bold.woff") format("woff");
+}
+
 body {
-  font-family: Arial;
+  font-family: "Pixelated MS Sans Serif", Arial, sans-serif;
   color: black;
 }
 
@@ -97,7 +115,7 @@ button:focus {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #dfdfdf;
+  background-color: grey;
 }
 
 ::-webkit-scrollbar-button:horizontal:end:increment,

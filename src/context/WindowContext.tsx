@@ -36,15 +36,8 @@ export const WindowProvider: React.FC<{ children: ReactNode }> = ({
   const zCounter = useRef<number>(1);
   const taskbarOrderCounter = useRef<number>(0);
 
-  // Error duplicate state matching original: var i = 0, x = 15, y = 12
-  const errorIndex = useRef<number>(0);
-  const errorPos = useRef<{ x: number; y: number }>({ x: 15, y: 12 });
-
   const getNextZ = () => {
     zCounter.current += 1;
-    if (zCounter.current >= 99999) {
-      zCounter.current = 1;
-    }
     return zCounter.current;
   };
 
@@ -103,14 +96,20 @@ export const WindowProvider: React.FC<{ children: ReactNode }> = ({
   };
 
   const duplicateError = () => {
-    const { x, y } = errorPos.current;
-    if (x >= 0 && x <= 60 && y >= 0 && y <= 70) {
-      errorIndex.current += 1;
-      const nextIndex = errorIndex.current;
+    setErrorWindows((prev) => {
+      let nextIndex = 1;
+      while (prev.some((error) => error.index === nextIndex)) {
+        nextIndex += 1;
+      }
+
+      const cascadeOffset = nextIndex - 1;
+      const x = 15 + cascadeOffset * 3;
+      const y = 12 + cascadeOffset * 3;
+      if (x > 60 || y > 70) return prev;
+
       const id = `error${nextIndex}`;
       const newZ = getNextZ();
-
-      setErrorWindows((prev) => [
+      return [
         ...prev,
         {
           id,
@@ -120,13 +119,8 @@ export const WindowProvider: React.FC<{ children: ReactNode }> = ({
           zIndex: newZ,
           taskbarOrder: getNextTaskbarOrder(),
         },
-      ]);
-
-      errorPos.current = {
-        x: x + 3,
-        y: y + 3,
-      };
-    }
+      ];
+    });
   };
 
   const closeWindow = (id: string) => {

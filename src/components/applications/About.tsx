@@ -19,12 +19,6 @@ const About: React.FC = () => {
               <li>
                 <strong>Nickname:</strong> Ryu
               </li>
-              <li>
-                <strong>Birth Year:</strong> 2000
-              </li>
-              <li>
-                <strong>Nationality:</strong> Thai
-              </li>
             </ul>
           </details>
         </li>
