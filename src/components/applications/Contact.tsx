@@ -1,5 +1,6 @@
 import React from "react";
 import { ICONS } from "../../config/icons";
+import Icon from "../common/Icon";
 
 const Contact: React.FC = () => {
   return (
@@ -7,7 +8,7 @@ const Contact: React.FC = () => {
       <a href="mailto:kongpanat.tan@gmail.com">
         <button className="folder-contact">
           <div className="icon">
-            <img
+            <Icon
               className="icon-pic infolder-contact"
               src={ICONS.mailboxWorld}
               alt="email"
@@ -24,7 +25,7 @@ const Contact: React.FC = () => {
       >
         <button className="folder-contact">
           <div className="icon">
-            <img
+            <Icon
               className="icon-pic infolder-contact"
               src={ICONS.linkedin}
               alt="linkedin"
@@ -34,14 +35,10 @@ const Contact: React.FC = () => {
         </button>
       </a>
 
-      <a
-        href="https://github.com/RyuNumchon/"
-        target="_blank"
-        rel="noreferrer"
-      >
+      <a href="https://github.com/RyuNumchon/" target="_blank" rel="noreferrer">
         <button className="folder-contact">
           <div className="icon">
-            <img
+            <Icon
               className="icon-pic infolder-contact"
               src={ICONS.github}
               alt="github"
@@ -52,53 +49,19 @@ const Contact: React.FC = () => {
       </a>
 
       <a
-        href="https://www.facebook.com/kongpanatT/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <button className="folder-contact">
-          <div className="icon">
-            <img
-              className="icon-pic infolder-contact"
-              src={ICONS.facebook}
-              alt="fb"
-            />
-          </div>
-          <div className="icon-name">Facebook</div>
-        </button>
-      </a>
-
-      <a
         href="https://www.instagram.com/legitbuddha/"
         target="_blank"
         rel="noreferrer"
       >
         <button className="folder-contact">
           <div className="icon">
-            <img
+            <Icon
               className="icon-pic infolder-contact"
               src={ICONS.instagram}
-              alt="IG"
+              alt="Instagram"
             />
           </div>
           <div className="icon-name">Instagram</div>
-        </button>
-      </a>
-
-      <a
-        href="https://twitter.com/Dadude50989656"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <button className="folder-contact">
-          <div className="icon">
-            <img
-              className="icon-pic infolder-contact"
-              src={ICONS.twitter}
-              alt="tweet"
-            />
-          </div>
-          <div className="icon-name">Twitter</div>
         </button>
       </a>
     </>

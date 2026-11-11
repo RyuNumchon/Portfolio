@@ -117,7 +117,7 @@ export const appsConfig: AppDefinition[] = [
   },
   {
     id: "win-siit",
-    title: "Aug. 2020 - Present",
+    title: "Aug. 2020 - Mar. 2025",
     icon: ICONS.siit8b,
     hasMaximize: true,
     hasClose: true,

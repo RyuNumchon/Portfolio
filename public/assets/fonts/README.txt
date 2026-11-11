@@ -1,11 +1,13 @@
-Drop original ms_sans_serif font files here to enable classic pixel font rendering.
+Pixelated MS Sans Serif webfonts used by the classic Windows 98 theme.
 
-Expected filenames (used by CSS):
-- ms_sans_serif.woff2
-- ms_sans_serif.woff
-- ms_sans_serif_bold.woff2
-- ms_sans_serif_bold.woff
+The regular and bold WOFF/WOFF2 files are from 98.css 0.1.21. The underlying
+"MS Sans Serif" and "MS Sans Serif Bold" typefaces were created by lou at
+FontStruction and are licensed under Creative Commons Attribution-ShareAlike
+3.0 (CC BY-SA 3.0).
 
-If you have sources for these fonts, copy them into this folder. Vite will serve them at /assets/fonts/... in dev and production builds.
+Sources:
+- https://fontstruct.com/fontstructions/show/1384746
+- https://fontstruct.com/fontstructions/show/1384862
+- https://creativecommons.org/licenses/by-sa/3.0/
 
-If you don't have these fonts, the app will fall back to Arial / system sans-serif.
+The app serves these files from /assets/fonts/.

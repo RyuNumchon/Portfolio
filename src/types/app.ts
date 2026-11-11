@@ -31,6 +31,7 @@ export interface AppDefinition {
 export interface WindowState {
   id: string;
   zIndex: number;
+  taskbarOrder: number;
   isMaximized: boolean;
   position?: { x: number; y: number };
   savedGeometry?: {
@@ -47,4 +48,5 @@ export interface ErrorWindowState {
   x: number;
   y: number;
   zIndex: number;
+  taskbarOrder: number;
 }

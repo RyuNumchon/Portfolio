@@ -31,7 +31,7 @@ const Achievements: React.FC = () => {
               <i>March 2023</i>
             </li>
             <li>
-              <i>Present</i>
+              <i>March 2024</i>
             </li>
           </ul>
         </ul>
@@ -56,7 +56,7 @@ const Achievements: React.FC = () => {
                 onClick={() =>
                   window.open(
                     "https://drive.google.com/file/d/1eEBstAu2g4jihXhyrUL_48CSaxgm__tp/view?usp=sharing",
-                    "_blank"
+                    "_blank",
                   )
                 }
               >

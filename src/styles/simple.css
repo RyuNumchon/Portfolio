@@ -1,0 +1,183 @@
+.theme-simple {
+  color: #000;
+  background-color: #999;
+}
+
+.theme-simple .webpage {
+  background: #fff;
+  background-image: none;
+}
+
+.theme-simple .window {
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #111;
+  border-bottom-width: 3px;
+  outline: none;
+  box-shadow:
+    2px 2px 0 #111,
+    inset 1px 1px #fff;
+}
+
+.theme-simple .title-bar {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #222 0 1px,
+    #fff 1px 2px
+  );
+}
+
+.theme-simple .title-bar-text {
+  background-color: #fff;
+  color: #000;
+}
+
+.theme-simple .window-body {
+  background-color: #fff;
+}
+
+.theme-simple button {
+  color: #000;
+}
+
+.theme-simple .folder-contact {
+  background-color: transparent;
+}
+
+.theme-simple .desktop .content {
+  color: #000;
+}
+
+.theme-simple .content:active .icon-name,
+.theme-simple .start-item:hover,
+.theme-simple .theme-picker button:hover,
+.theme-simple .theme-picker button:focus-visible {
+  background-color: #808080;
+  color: #fff;
+}
+
+.theme-simple
+  .tab-box-content
+  #topic-4:checked
+  ~ .tab-box
+  ul
+  label[for="topic-4"],
+.theme-simple
+  .tab-box-content
+  #topic-3:checked
+  ~ .tab-box
+  ul
+  label[for="topic-3"],
+.theme-simple
+  .tab-box-content
+  #topic-2:checked
+  ~ .tab-box
+  ul
+  label[for="topic-2"],
+.theme-simple
+  .tab-box-content
+  #topic-1:checked
+  ~ .tab-box
+  ul
+  label[for="topic-1"],
+.theme-simple
+  .tab-box-content
+  #topic-0:checked
+  ~ .tab-box
+  ul
+  label[for="topic-0"] {
+  background-color: #808080;
+  color: #fff;
+}
+
+.theme-simple img {
+  filter: grayscale(1);
+}
+
+.theme-simple ul.tree-view {
+  background-color: #fff;
+}
+
+.theme-simple #start-box {
+  background-color: #ddd;
+}
+
+.theme-simple #start-header {
+  background: #aaa;
+}
+
+.theme-simple #start-header-name {
+  color: #000;
+}
+
+.theme-simple #footer {
+  background-color: #aaa;
+}
+
+.theme-simple #start-button,
+.theme-simple .taskbar-window-tab {
+  background-color: #eee;
+}
+
+.theme-simple .taskbar-window-tab[aria-pressed="true"] {
+  background-color: #808080;
+  color: #fff;
+}
+
+.theme-simple ::-webkit-scrollbar {
+  background-color: #ddd;
+}
+
+.theme-simple ::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.theme-simple ::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+.theme-simple ::-webkit-scrollbar-button {
+  background-color: #ddd;
+}
+
+.theme-picker {
+  position: absolute;
+  z-index: 100001;
+  bottom: calc(100% + 4px);
+  left: 0;
+  display: grid;
+  min-width: 9rem;
+  padding: 3px;
+  border: 1px solid #111;
+  background: #eee;
+  box-shadow: 1px 1px 0 #111;
+}
+
+.theme-picker button {
+  min-height: 24px;
+  padding: 3px 8px;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  text-align: left;
+  font-size: 12px;
+}
+
+.theme-picker button[aria-checked="true"]::before {
+  content: "✓";
+  display: inline-block;
+  width: 16px;
+}
+
+.theme-picker button[aria-checked="false"]::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+}
+
+.theme-picker button:hover,
+.theme-picker button:focus-visible {
+  color: #fff;
+  background: #808080;
+  outline: none;
+}

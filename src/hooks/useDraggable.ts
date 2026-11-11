@@ -62,16 +62,17 @@ export function useDraggable(
       const winH =
         document.documentElement.clientHeight || document.body.clientHeight;
 
-      const maxX = winW - elementRef.current.offsetWidth;
-      const maxY = winH - elementRef.current.offsetHeight - 55; // account for taskbar height
-
-      let newLeft = dragData.current.origX + dx;
-      let newTop = dragData.current.origY + dy;
-
-      if (newLeft < 0) newLeft = 0;
-      if (newLeft > maxX) newLeft = maxX;
-      if (newTop < 0) newTop = 0;
-      if (newTop > maxY) newTop = maxY;
+      const taskbarHeight = document.getElementById("footer")?.offsetHeight ?? 55;
+      const maxX = Math.max(0, winW - elementRef.current.offsetWidth);
+      const maxY = Math.max(
+        0,
+        winH - elementRef.current.offsetHeight - taskbarHeight,
+      );
+      const newLeft = Math.min(
+        maxX,
+        Math.max(0, dragData.current.origX + dx),
+      );
+      const newTop = Math.min(maxY, Math.max(0, dragData.current.origY + dy));
 
       elementRef.current.style.left = `${newLeft}px`;
       elementRef.current.style.top = `${newTop}px`;

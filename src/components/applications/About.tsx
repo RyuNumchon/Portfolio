@@ -1,5 +1,6 @@
 import React from "react";
 import { ICONS } from "../../config/icons";
+import Icon from "../common/Icon";
 
 const About: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ const About: React.FC = () => {
         <li>
           <details open>
             <summary>
-              <img src={ICONS.userCalendar} alt="calendar" />
+              <Icon src={ICONS.userCalendar} alt="calendar" />
               Personal Info
             </summary>
             <ul>
@@ -19,19 +20,13 @@ const About: React.FC = () => {
               <li>
                 <strong>Nickname:</strong> Ryu
               </li>
-              <li>
-                <strong>Birth Year:</strong> 2000
-              </li>
-              <li>
-                <strong>Nationality:</strong> Thai
-              </li>
             </ul>
           </details>
         </li>
         <li>
           <details>
             <summary>
-              <img src={ICONS.appWizard} alt="hobbies" />
+              <Icon src={ICONS.appWizard} alt="hobbies" />
               Hobbies &amp; Interests
             </summary>
             <ul>
